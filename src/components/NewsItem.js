@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class NewsItem extends Component {
-    render() {
+const NewsItem = (props) => {
         // desconstruction the props 
-        let { title, description, imageUrl, newsUrl, author, date, source } = this.props;
+        let { title, description, imageUrl, newsUrl, author, date, source } = props;
         return (
             <div>
                 {/* //making a card to show the image, title, description, author and date */}
@@ -11,7 +10,7 @@ export class NewsItem extends Component {
 
                 <div style={{display: 'flex', justifyContent: 'flex-end', position: 'absolute'}}>
                     {/* //showing the source of the articles like a badge  */}
-                    <span class="badge rounded-pill bg-primary" style={{ zIndex: 1, left: '90%' }}>{source}</span>
+                    <span className="badge rounded-pill bg-primary" style={{ zIndex: 1, left: '90%' }}>{source}</span>
                 </div>
 
                     {/* //showing the image for the article */}
@@ -33,7 +32,7 @@ export class NewsItem extends Component {
 
             </div>
         )
-    }
+
 }
 
 export default NewsItem

@@ -34,7 +34,7 @@ const News = (props) => {
       //setting the progressBAr to 70% of the progress
       props.setProgress(70);
 
-      //setting the state of component after the getting the response from the API
+      //setting the state after the getting the response from the API
       setArticles(parsedData.articles); //storing the all the articles in articles array 
       setTotalResults(parsedData.totalResults); //storing the no. of total results in totalResults
       setLoading(false); //setting the loading status false because we got the data from the api now we need to show it

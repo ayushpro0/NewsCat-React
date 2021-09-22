@@ -3,27 +3,19 @@ import React, { useState } from 'react'
 import NavBar from './components/NavBar';
 import News from './components/News';
 import LoadingBar from 'react-top-loading-bar';
-
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   const pageSize = 8;
-
    const [progress, setProgress] = useState(0);
+
       return (
          <div>
             <Router>
                {/* //showing the navbar component  */}
                <NavBar />
 
-               <LoadingBar
-                  color='#F4ABC4'
-                  height = {3}
-                  shadow = {true}
-                  progress={progress}
-                  
-               />
+               <LoadingBar color='#F4ABC4' height = {3} shadow = {true} progress={progress}/>
 
                {/* //routing on the website  */}
                <Switch>
